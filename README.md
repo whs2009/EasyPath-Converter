@@ -4,15 +4,15 @@ Batch-convert local whole-slide images into an EasyPath EP, lossless tiled pyram
 
 ## Downloads
 
-Use the [GitHub Releases page](https://github.com/whs2009/EasyPath-Converter/releases) for standalone packages and `SHA256SUMS`. Choose the **asset** matching your machine, not GitHub's automatic source ZIP. Releases are published only after all five native jobs pass; the [build status](https://github.com/whs2009/EasyPath-Converter/actions/workflows/general.yml) shows pending or failed builds.
+**[v0.1.0-general.1](https://github.com/whs2009/EasyPath-Converter/releases/tag/v0.1.0-general.1)**: all five General packages passed their [native build and packaged-app checks](https://github.com/whs2009/EasyPath-Converter/actions/runs/45729132901). Use the direct downloads below and compare your file with [SHA256SUMS](https://github.com/whs2009/EasyPath-Converter/releases/download/v0.1.0-general.1/SHA256SUMS). GitHub's automatic source ZIP is not a standalone executable.
 
 | Platform | Release asset |
 |---|---|
-| Windows x86-64 | `EasyPath-Format-Converter-windows-x64.exe` |
-| macOS Apple silicon | `EasyPath-Format-Converter-macos-arm64.dmg` |
-| macOS Intel | `EasyPath-Format-Converter-macos-x64.dmg` |
-| Ubuntu x86-64 | `EasyPath-Format-Converter-ubuntu-x64.AppImage` |
-| Ubuntu ARM64 | `EasyPath-Format-Converter-ubuntu-arm64.AppImage` |
+| Windows x86-64 | [EasyPath-Format-Converter-windows-x64.exe](https://github.com/whs2009/EasyPath-Converter/releases/download/v0.1.0-general.1/EasyPath-Format-Converter-windows-x64.exe) |
+| macOS Apple silicon | [EasyPath-Format-Converter-macos-arm64.dmg](https://github.com/whs2009/EasyPath-Converter/releases/download/v0.1.0-general.1/EasyPath-Format-Converter-macos-arm64.dmg) |
+| macOS Intel | [EasyPath-Format-Converter-macos-x64.dmg](https://github.com/whs2009/EasyPath-Converter/releases/download/v0.1.0-general.1/EasyPath-Format-Converter-macos-x64.dmg) |
+| Ubuntu x86-64 | [EasyPath-Format-Converter-ubuntu-x64.AppImage](https://github.com/whs2009/EasyPath-Converter/releases/download/v0.1.0-general.1/EasyPath-Format-Converter-ubuntu-x64.AppImage) |
+| Ubuntu ARM64 | [EasyPath-Format-Converter-ubuntu-arm64.AppImage](https://github.com/whs2009/EasyPath-Converter/releases/download/v0.1.0-general.1/EasyPath-Format-Converter-ubuntu-arm64.AppImage) |
 
 On Windows, compare `Get-FileHash .\<filename> -Algorithm SHA256` with the published checksum. On macOS use `shasum -a 256`, then open the DMG. On Ubuntu use `sha256sum` and give the AppImage execute permission before launching it. No Python installation is needed for packaged downloads. Follow your organization's signing and execution policies.
 
