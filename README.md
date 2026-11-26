@@ -4,7 +4,7 @@ Batch-convert local whole-slide images into an EasyPath EP, lossless tiled pyram
 
 ## Downloads
 
-**[v0.1.0-general.1](https://github.com/whs2009/EasyPath-Converter/releases/tag/v0.1.0-general.1)**: all five General packages passed their [native build and packaged-app checks](https://github.com/whs2009/EasyPath-Converter/actions/runs/45729132901). Use the direct downloads below and compare your file with [SHA256SUMS](https://github.com/whs2009/EasyPath-Converter/releases/download/v0.1.0-general.1/SHA256SUMS). GitHub's automatic source ZIP is not a standalone executable.
+**[v0.1.0-general.1](https://github.com/whs2009/EasyPath-Converter/releases/tag/v0.1.0-general.1)**: the Windows, macOS and Ubuntu General packages passed their [native build and packaged-app checks](https://github.com/whs2009/EasyPath-Converter/actions/runs/45729132901). Verify those downloads with [SHA256SUMS](https://github.com/whs2009/EasyPath-Converter/releases/download/v0.1.0-general.1/SHA256SUMS). GitHub's automatic source ZIP is not a standalone executable.
 
 | Platform | Release asset |
 |---|---|
@@ -13,8 +13,11 @@ Batch-convert local whole-slide images into an EasyPath EP, lossless tiled pyram
 | macOS Intel | [EasyPath-Format-Converter-macos-x64.dmg](https://github.com/whs2009/EasyPath-Converter/releases/download/v0.1.0-general.1/EasyPath-Format-Converter-macos-x64.dmg) |
 | Ubuntu x86-64 | [EasyPath-Format-Converter-ubuntu-x64.AppImage](https://github.com/whs2009/EasyPath-Converter/releases/download/v0.1.0-general.1/EasyPath-Format-Converter-ubuntu-x64.AppImage) |
 | Ubuntu ARM64 | [EasyPath-Format-Converter-ubuntu-arm64.AppImage](https://github.com/whs2009/EasyPath-Converter/releases/download/v0.1.0-general.1/EasyPath-Format-Converter-ubuntu-arm64.AppImage) |
+| CentOS Stream 9 x86-64 | [EasyPath-Format-Converter-centos-stream9-x64.AppImage](https://github.com/whs2009/EasyPath-Converter/releases/download/v0.1.0-general.1/EasyPath-Format-Converter-centos-stream9-x64.AppImage) ([SHA-256](https://github.com/whs2009/EasyPath-Converter/releases/download/v0.1.0-general.1/EasyPath-Format-Converter-centos-stream9-x64.AppImage.sha256)) |
 
-On Windows, compare `Get-FileHash .\<filename> -Algorithm SHA256` with the published checksum. On macOS use `shasum -a 256`, then open the DMG. On Ubuntu use `sha256sum` and give the AppImage execute permission before launching it. No Python installation is needed for packaged downloads. Follow your organization's signing and execution policies.
+The CentOS AppImage passed its [native CentOS Stream 9 build and tests](https://github.com/whs2009/EasyPath-Converter/actions/runs/45814241888). To verify it, download the SHA-256 file in its row and run `sha256sum -c EasyPath-Format-Converter-centos-stream9-x64.AppImage.sha256` in the download directory.
+
+On Windows, compare `Get-FileHash .\<filename> -Algorithm SHA256` with the published checksum. On macOS use `shasum -a 256`, then open the DMG. On Ubuntu or CentOS use `sha256sum` and give the AppImage execute permission before launching it. No Python installation is needed for packaged downloads. Follow your organization's signing and execution policies.
 
 ## Convert slides
 
