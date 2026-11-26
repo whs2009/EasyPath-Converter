@@ -17,7 +17,8 @@ PINS = {
 def package(binary, dest):
     machine = platform.machine().lower()
     arch = {"arm64":"arm64","aarch64":"arm64","x86_64":"x64"}[machine]
-    system = {"darwin":"macos","linux":"ubuntu"}[sys.platform]
+    from runpy import run_path
+    system = run_path(str(Path(__file__).resolve().parents[2]/"packaging/native_target.py"))["system_name"]()
     name = f"EasyPath-Format-Converter-{system}-{arch}"
     if binary.name != name or not os.access(binary, os.X_OK):
         raise ValueError("Expected the matching native executable.")
