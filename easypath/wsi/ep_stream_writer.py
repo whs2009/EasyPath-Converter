@@ -301,7 +301,7 @@ def write_ep_streaming_artifact(path, metadata, read_source_plane, *, max_file_b
         output.write(final_header)
         output.flush()
         os.fsync(output.fileno())
-    result = dict(sha256=digest.hexdigest(), size_bytes=total, tile_count=count,
+    result = dict(sha256=digest.hexdigest(), size_bytes=total, tile_count=count, verified=True,
         rgb_sample_count=samples, rgb_sse=0, rgb_nrmse_percent=0.0,
         reference="caller-supplied canonical sRGB planes; padded pixels excluded", codec=identity, registered=False,
         streaming=dict(**stats, uniform_cache=uniform_cache.info(), compressed_spool_bytes=frozen_spool[2],
